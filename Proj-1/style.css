@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --VDM: hsl(300, 43%, 22%);
+    --VDM2: hsl(300, 43%, 30%);
+    --SP: hsl(333, 80%, 67%);
+
+    --DGM: hsl(303, 10%, 53%);
+    --LGM: hsl(300, 24%, 96%);
+}
+
+.nobreak{
+    break-inside: avoid;
+    white-space: nowrap;
+}
+
+body {
+    background-image: url('./social-proof-section-master/images/bg-pattern-top-desktop.svg'), url('./social-proof-section-master/images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    display: flex;
+    font-family: 'League Spartan';
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: auto;
+    width: 80%;
+}
+
+.rating {
+    display: flex;
+}
+
+.Description {
+    height: auto;
+    flex: 1;
+}
+
+.CustomerRating {
+    flex: 1;
+    width: auto;
+}
+
+.heading {
+    width: 65%;
+    font-size: 6vh;
+    font-weight: 700;
+    color: var(--VDM);
+}
+
+.about {
+    width: 60%;
+    font-size: 1.vh;
+    line-height: 1.5;
+    font-weight: 350;
+    padding: 1rem 0rem;
+    color: var(--VDM2);
+}
+
+.CustomerRating{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post {
+    width: fit-content;
+    text-align: center;
+    background-color: var(--LGM);
+    color: var(--VDM);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0rem;
+}
+
+
+
+.CustomerComments{
+    display: flex;
+    justify-content: space-evenly;
+    gap:2rem;
+}
+.review{
+    min-width: 150px;
+    margin-top: 2rem;
+    background-color: var(--VDM);
+    border-radius: 15px;
+    padding:3rem 2rem;
+    color:white;
+    line-height: 1.3;
+    word-spacing: 1.1;
+    font-weight: 450;
+    font-size: 1rem;
+    height: fit-content;
+
+}
+.photo{
+    display:flex;
+    gap:2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+img{
+    border-radius: 50%;
+    width: 15%;
+}
+.name .verified{
+    color:var(--SP);    
+}
+
+.customerName{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.review:nth-child(2){
+    margin-top: 3rem;
+}
+.review:nth-child(3){
+    margin-top: 4rem;
+}
+
+@media(max-width:725px){
+    .body{
+        display: flex;
+        flex-direction: row;
+        background-image: url('./social-proof-section-master/images/bg-pattern-top-mobile.svg'), url('./social-proof-section-master/images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating{
+    margin-top: 5rem;
+    /* width: 100%; */
+        text-align: center;
+        display: block;
+        padding: 1rem;
+    }
+    .about,.heading{
+        width: 100%;
+    }
+    .CustomerComments{
+        display: block;
+
+    }
+
+}@media(min-width:726px) {
+    .post:first-child {
+        align-self: flex-start;
+    }
+    
+    .post:nth-child(2) {
+        align-self: center;
+    }
+    
+    .post:last-child {
+    
+        align-self: flex-end;
+    }   
+}
